@@ -15,7 +15,7 @@ function LoginPage(props) {
           className="mr-96z mb-2 w-80 h-10 border border-gray-500 rounded-t-lg rounded-b-lg"
           type="email"
           name="email"
-          value={props.formData}
+          value={props.loginData}
           onChange={props.toggle}
         />
         <div style={{ position: "relative" }}>
@@ -37,7 +37,7 @@ function LoginPage(props) {
           className=" mr-96z mb-2 w-80 h-10 border border-gray-500 rounded-t-lg rounded-b-lg"
           type="password"
           name="password"
-          value={props.formData}
+          value={props.loginData}
           onChange={props.toggle}
         />
 
@@ -62,7 +62,7 @@ function LoginPage(props) {
           type="checkbox"
           name="isRemembered"
           onChange={props.toggle}
-          checked={props.formData}
+          checked={props.loginData}
         />
         <label className="mr-24">Remember me</label>
         <label><a href="#">Forgot Password?</a></label>
