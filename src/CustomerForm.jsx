@@ -10,7 +10,7 @@ function CustomerForm(props) {
             id="username"
             type="text"
             name="username"
-            value={props.customerData.username}
+            value={props.customerData}
             onChange={props.toggle}
           />
         </div>
@@ -20,7 +20,7 @@ function CustomerForm(props) {
             id="email"
             type="email"
             name="email"
-            value={props.customerData.email}
+            value={props.customerData}
             onChange={props.toggle}
           />
         </div>
@@ -30,7 +30,7 @@ function CustomerForm(props) {
             id="phone_no"
             type="tel"
             name="phone_no"
-            value={props.customerData.phone_no}
+            value={props.customerData}
             onChange={props.toggle}
           />
         </div>
@@ -40,7 +40,7 @@ function CustomerForm(props) {
             id="first_name_en"
             type="text"
             name="first_name_en"
-            value={props.customerData.first_name_en}
+            value={props.customerData}
             onChange={props.toggle}
           />
         </div>
@@ -50,7 +50,7 @@ function CustomerForm(props) {
             id="middle_name_en"
             type="text"
             name="middle_name_en"
-            value={props.customerData.middle_name_en}
+            value={props.customerData}
             onChange={props.toggle}
           />
         </div>
@@ -60,7 +60,7 @@ function CustomerForm(props) {
             id="last_name_en"
             type="text"
             name="last_name_en"
-            value={props.customerData.last_name_en}
+            value={props.customerData}
             onChange={props.toggle}
           />
         </div>
@@ -140,7 +140,7 @@ function CustomerForm(props) {
             id="municipality_name"
             type="text"
             name="municipality_name"
-            value={props.customerData.municipality_name}
+            value={props.customerData}
             onChange={props.toggle}
           />
         </div>

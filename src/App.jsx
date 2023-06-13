@@ -110,16 +110,16 @@ function App() {
         toggle={handleChange}
         hangleForm={handleSubmit}
       /> */}
-      <CustomerForm toggle={handleChange} hangleForm={handleSubmit} />
+      {/* <CustomerForm toggle={handleChange} hangleForm={handleSubmit} /> */}
 
       {/* <WardForm 
         toggle={handleChange}
         hangleForm={handleSubmit}
-      />
+      /> */}
       <MunicipalityForm 
         toggle={handleChange}
         hangleForm={handleSubmit}
-      /> */}
+      />
     </div>
   );
 }
