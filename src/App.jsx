@@ -4,6 +4,7 @@ import "./App.css";
 import WardForm from "./WardForm";
 import MunicipalityForm from "./MunicipalityForm";
 import CustomerForm from "./CustomerForm";
+//import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   const [loginData, setLoginData] = useState({
@@ -105,21 +106,19 @@ function App() {
   }
 
   return (
+    // <Router>
+    //   <Switch>
+    //     <Route path="/login">
+
+    //     </Route>
+    //   </Switch>
+    // </Router>
     <div>
-      {/* <LoginPage
-        toggle={handleChange}
-        hangleForm={handleSubmit}
-      /> */}
+      {/* <LoginPage toggle={handleChange} hangleForm={handleSubmit} /> */}
       {/* <CustomerForm toggle={handleChange} hangleForm={handleSubmit} /> */}
 
-      {/* <WardForm 
-        toggle={handleChange}
-        hangleForm={handleSubmit}
-      /> */}
-      <MunicipalityForm 
-        toggle={handleChange}
-        hangleForm={handleSubmit}
-      />
+      {/* <WardForm toggle={handleChange} hangleForm={handleSubmit} /> */}
+      <MunicipalityForm toggle={handleChange} hangleForm={handleSubmit} />
     </div>
   );
 }

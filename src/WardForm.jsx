@@ -1,11 +1,16 @@
+import "./App.css";
 function WardForm(props) {
   return (
-    <div>
-      <h1>Ward Form</h1>
-      <form onSubmit={props.hangleForm}>
-        <div>
+    <div className="max-w-md mx-auto mt-10 p-6 bg-white rounded shadow-lg">
+      <h1 className="text-2xl font-bold mb-6">Ward Form</h1>
+      <form
+        onSubmit={props.hangleForm}
+        className="border rounded w-full py-2 px-3 mt-1 text-justify"
+      >
+        <div className="my-2 mx-5">
           <label htmlFor="description">Description</label>
           <input
+            className="ml-10 border border-gray-500 text-right"
             id="description"
             type="text"
             name="description"
@@ -13,9 +18,10 @@ function WardForm(props) {
             onChange={props.toggle}
           />
         </div>
-        <div>
+        <div className="my-2 mx-5">
           <label htmlFor="number">Number</label>
           <input
+            className="ml-10 border border-gray-500"
             id="number"
             type="number"
             name="number"
@@ -23,9 +29,10 @@ function WardForm(props) {
             onChange={props.toggle}
           />
         </div>
-        <div>
+        <div className="my-2 mx-5">
           <label htmlFor="address">Address</label>
           <input
+            className="ml-10 border border-gray-500"
             id="address"
             type="text"
             name="address"
@@ -33,9 +40,10 @@ function WardForm(props) {
             onChange={props.toggle}
           />
         </div>
-        <div>
+        <div className="my-2 mx-5">
           <label htmlFor="contact_no">Contact Number</label>
           <input
+            className="ml-10 border border-gray-500"
             id="contact_no"
             type="number"
             name="contact_no"
@@ -43,9 +51,10 @@ function WardForm(props) {
             onChange={props.toggle}
           />
         </div>
-        <div>
+        <div className="my-2 mx-5">
           <label htmlFor="email">Email</label>
           <input
+            className="ml-10 border border-gray-500"
             id="email"
             type="email"
             name="email"
@@ -53,9 +62,10 @@ function WardForm(props) {
             onChange={props.toggle}
           />
         </div>
-        <div>
+        <div className="my-2 mx-5">
           <label htmlFor="population">Population</label>
           <input
+            className="ml-10 border border-gray-500"
             id="population"
             type="number"
             name="population"
@@ -63,11 +73,10 @@ function WardForm(props) {
             onChange={props.toggle}
           />
         </div>
-        <div>
-          <label htmlFor="chief_first_name_en">
-            Chief First Name (English)
-          </label>
+        <div className="my-2 mx-5">
+          <label htmlFor="chief_first_name_en">Chief First Name</label>
           <input
+            className="ml-10 border border-gray-500"
             id="chief_first_name_en"
             type="text"
             name="chief_first_name_en"
@@ -75,11 +84,10 @@ function WardForm(props) {
             onChange={props.toggle}
           />
         </div>
-        <div>
-          <label htmlFor="chief_middle_name_en">
-            Chief Middle Name (English)
-          </label>
+        <div className="my-2 mx-5">
+          <label htmlFor="chief_middle_name_en">Chief Middle Name</label>
           <input
+            className="ml-10 border border-gray-500"
             id="chief_middle_name_en"
             type="text"
             name="chief_middle_name_en"
@@ -87,9 +95,10 @@ function WardForm(props) {
             onChange={props.toggle}
           />
         </div>
-        <div>
-          <label htmlFor="chief_last_name_en">Chief Last Name (English)</label>
+        <div className="my-2 mx-5">
+          <label htmlFor="chief_last_name_en">Chief Last Name</label>
           <input
+            className="ml-10 border border-gray-500"
             id="chief_last_name_en"
             type="text"
             name="chief_last_name_en"
@@ -97,9 +106,10 @@ function WardForm(props) {
             onChange={props.toggle}
           />
         </div>
-        <div>
-          <label htmlFor="chief_first_name_np">Chief First Name (Nepali)</label>
+        <div className="my-2 mx-5">
+          <label htmlFor="chief_first_name_np">Chief First Name</label>
           <input
+            className="ml-10 border border-gray-500"
             id="chief_first_name_np"
             type="text"
             name="chief_first_name_np"
@@ -107,11 +117,10 @@ function WardForm(props) {
             onChange={props.toggle}
           />
         </div>
-        <div>
-          <label htmlFor="chief_middle_name_np">
-            Chief Middle Name (Nepali)
-          </label>
+        <div className="my-2 mx-5">
+          <label htmlFor="chief_middle_name_np">Chief Middle Name</label>
           <input
+            className="ml-10 border border-gray-500"
             id="chief_middle_name_np"
             type="text"
             name="chief_middle_name_np"
@@ -119,9 +128,10 @@ function WardForm(props) {
             onChange={props.toggle}
           />
         </div>
-        <div>
-          <label htmlFor="chief_last_name_np">Chief Last Name (Nepali)</label>
+        <div className="my-2 mx-5">
+          <label htmlFor="chief_last_name_np">Chief Last Name</label>
           <input
+            className="ml-10 border border-gray-500"
             id="chief_last_name_np"
             type="text"
             name="chief_last_name_np"
@@ -129,7 +139,9 @@ function WardForm(props) {
             onChange={props.toggle}
           />
         </div>
-        <button type="submit">Submit</button>
+        <button type="submit" className="mt-3 bg-green-500 w-80 h-9 rounded-t-lg rounded-b-lg">
+          Submit
+        </button>
       </form>
     </div>
   );
