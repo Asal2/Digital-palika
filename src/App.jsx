@@ -4,8 +4,8 @@ import "./App.css";
 import WardForm from "./WardForm";
 import MunicipalityForm from "./MunicipalityForm";
 import CustomerForm from "./CustomerForm";
-import { Route } from "react-router-dom";
-import { Switch, Route, Link } from "react-router-dom";
+import {Link, Routes, Route } from 'react-router-dom';
+
 
 function App() {
   const [loginData, setLoginData] = useState({
@@ -109,25 +109,25 @@ function App() {
   return (
     <div>
       <nav>
-        <Link to="/login">Login</Link>
-        <Link to="/Ward">Ward</Link>
-        <Link to="/Customer">Customer</Link>
-        <Link to="/Municipality">Municipality</Link>
+        <Link to="/login" className="mr-2">Login</Link>
+        <Link to="/Ward" className="mr-2">Ward</Link>
+        <Link to="/Customer" className="mr-2">Customer</Link>
+        <Link to="/Municipality" className="mr-2">Municipality</Link>
       </nav>
-      <Switch>
-        <Route path="/login">
-          <LoginPage toggle={handleChange} hangleForm={handleSubmit} />
-        </Route>
-        <Route path="/Ward">
-          <WardForm toggle={handleChange} hangleForm={handleSubmit} />
-        </Route>
-        <Route path="/Customer">
-          <CustomerForm toggle={handleChange} hangleForm={handleSubmit} />
-        </Route>
-        <Route path="/Municipality">
-          <MunicipalityForm toggle={handleChange} hangleForm={handleSubmit} />
-        </Route>
-      </Switch>
+      <Routes>
+        <Route path="/login"
+          element={<LoginPage toggle={handleChange} hangleForm={handleSubmit}/>}
+        />
+        <Route path="/Ward"
+        element={<WardForm toggle={handleChange} hangleForm={handleSubmit} />}
+        />
+        <Route path="/Customer"
+          element={<CustomerForm toggle={handleChange} hangleForm={handleSubmit} />}
+        />
+        <Route path="/Municipality"
+          element={<MunicipalityForm toggle={handleChange} hangleForm={handleSubmit} />}
+        />
+      </Routes>
     </div>
   );
 }
