@@ -91,10 +91,32 @@ function App() {
 
   const emailPattern = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
 
-  function handleChange(event) {
+  function handleChangeLogin(event) {
     const { name, value, type, checked } = event.target;
     setLoginData((prevloginData) => ({
       ...prevloginData,
+      [name]: type === "checkbox" ? checked : value,
+    }));
+  }
+  function handleChangeWard(event) {
+    const { name, value, type, checked } = event.target;
+    setWardData((prevWardData) => ({
+      ...prevWardData,
+      [name]: type === "checkbox" ? checked : value,
+    }));
+  }
+  
+  function handleChangeMunicipality(event) {
+    const { name, value, type, checked } = event.target;
+    setMunicipalityData((prevMunicipalityData) => ({
+      ...prevMunicipalityData,
+      [name]: type === "checkbox" ? checked : value,
+    }));
+  }
+  function handleChangeCustomer(event) {
+    const { name, value, type, checked } = event.target;
+    setCustomerData((prevCustomerData) => ({
+      ...prevCustomerData,
       [name]: type === "checkbox" ? checked : value,
     }));
   }
@@ -116,16 +138,16 @@ function App() {
       </nav>
       <Routes>
         <Route path="/login"
-          element={<LoginPage toggle={handleChange} hangleForm={handleSubmit}/>}
+          element={<LoginPage toggle={handleChangeLogin} hangleForm={handleSubmit}/>}
         />
         <Route path="/Ward"
-        element={<WardForm toggle={handleChange} hangleForm={handleSubmit} />}
+        element={<WardForm toggle={handleChangeWard} hangleForm={handleSubmit} />}
         />
         <Route path="/Customer"
-          element={<CustomerForm toggle={handleChange} hangleForm={handleSubmit} />}
+          element={<CustomerForm toggle={handleChangeMunicipality} hangleForm={handleSubmit} />}
         />
         <Route path="/Municipality"
-          element={<MunicipalityForm toggle={handleChange} hangleForm={handleSubmit} />}
+          element={<MunicipalityForm toggle={handleChangeCustomer} hangleForm={handleSubmit} />}
         />
       </Routes>
     </div>
