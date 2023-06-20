@@ -17,7 +17,6 @@ function LoginPage(props) {
           name="email"
           value={props.loginData}
           onChange={props.toggle}
-          required
         />
         <div style={{ position: "relative" }}>
           <div
@@ -40,7 +39,6 @@ function LoginPage(props) {
           name="password"
           value={props.loginData}
           onChange={props.toggle}
-          required
         />
 
         <div style={{ position: "relative" }}>

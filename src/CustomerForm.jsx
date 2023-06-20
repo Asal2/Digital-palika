@@ -7,11 +7,14 @@ function CustomerForm(props) {
           <h1 className="text-2xl">Customer</h1>
         </div>
       </div>
-      <form onSubmit={props.hangleForm} className="border rounded w-full py-2 px-3 mt-1 text-right" aria-required>
-        <div className="my-2 mx-5">
+      <form
+        onSubmit={props.hangleForm}
+        className="border rounded w-full py-2 px-3 mt-1"
+      >
+        <div className="my-2 mx-5 flex">
           <label htmlFor="username">Username</label>
           <input
-            className="ml-10 border border-gray-500 text-right"
+            className="ml-auto border border-gray-500"
             id="username"
             type="text"
             name="username"
@@ -19,10 +22,10 @@ function CustomerForm(props) {
             onChange={props.toggle}
           />
         </div>
-        <div className="my-2 mx-5">
+        <div className="my-2 mx-5 flex">
           <label htmlFor="email">Email</label>
           <input
-            className="ml-10 border border-gray-500"
+            className="ml-auto border border-gray-500"
             id="email"
             type="email"
             name="email"
@@ -30,10 +33,10 @@ function CustomerForm(props) {
             onChange={props.toggle}
           />
         </div>
-        <div className="my-2 mx-5">
+        <div className="my-2 mx-5 flex">
           <label htmlFor="phone_no">Phone Number</label>
           <input
-            className="ml-10 border border-gray-500"
+            className="ml-auto border border-gray-500"
             id="phone_no"
             type="tel"
             name="phone_no"
@@ -41,10 +44,10 @@ function CustomerForm(props) {
             onChange={props.toggle}
           />
         </div>
-        <div className="my-2 mx-5">
+        <div className="my-2 mx-5 flex">
           <label htmlFor="first_name_en">First Name</label>
           <input
-            className="ml-10 border border-gray-500"
+            className="ml-auto border border-gray-500"
             id="first_name_en"
             type="text"
             placeholder="English"
@@ -53,10 +56,10 @@ function CustomerForm(props) {
             onChange={props.toggle}
           />
         </div>
-        <div className="my-2 mx-5">
+        <div className="my-2 mx-5 flex">
           <label htmlFor="middle_name_en">Middle Name</label>
           <input
-            className="ml-10 border border-gray-500"
+            className="ml-auto border border-gray-500"
             id="middle_name_en"
             placeholder="English"
             type="text"
@@ -65,10 +68,10 @@ function CustomerForm(props) {
             onChange={props.toggle}
           />
         </div>
-        <div className="my-2 mx-5">
+        <div className="my-2 mx-5 flex">
           <label htmlFor="last_name_en">Last Name</label>
           <input
-            className="ml-10 border border-gray-500"
+            className="ml-auto border border-gray-500"
             id="last_name_en"
             type="text"
             placeholder="English"
@@ -77,10 +80,10 @@ function CustomerForm(props) {
             onChange={props.toggle}
           />
         </div>
-        <div className="my-2 mx-5">
+        <div className="my-2 mx-5 flex">
           <label htmlFor="first_name_np">First Name</label>
           <input
-            className="ml-10 border border-gray-500"
+            className="ml-auto border border-gray-500"
             id="first_name_np"
             type="text"
             placeholder="Nepali"
@@ -89,10 +92,10 @@ function CustomerForm(props) {
             onChange={props.toggle}
           />
         </div>
-        <div className="my-2 mx-5">
+        <div className="my-2 mx-5 flex">
           <label htmlFor="middle_name_np">Middle Name</label>
           <input
-            className="ml-10 border border-gray-500"
+            className="ml-auto border border-gray-500"
             id="middle_name_np"
             type="text"
             placeholder="Nepali"
@@ -101,10 +104,10 @@ function CustomerForm(props) {
             onChange={props.toggle}
           />
         </div>
-        <div className="my-2 mx-5">
+        <div className="my-2 mx-5 flex">
           <label htmlFor="last_name_np">Last Name</label>
           <input
-            className="ml-10 border border-gray-500"
+            className="ml-auto border border-gray-500"
             id="last_name_np"
             type="text"
             placeholder="Nepali"
@@ -113,10 +116,10 @@ function CustomerForm(props) {
             onChange={props.toggle}
           />
         </div>
-        <div className="my-2 mx-5">
+        <div className="my-2 mx-5 flex">
           <label htmlFor="post">Post</label>
           <input
-            className="ml-10 border border-gray-500"
+            className="ml-auto border border-gray-500"
             id="post"
             type="text"
             placeholder="English"
@@ -125,10 +128,10 @@ function CustomerForm(props) {
             onChange={props.toggle}
           />
         </div>
-        <div className="my-2 mx-5">
+        <div className="my-2 mx-5 flex">
           <label htmlFor="role">Role</label>
           <input
-            className="ml-10 border border-gray-500"
+            className="ml-auto border border-gray-500"
             id="role"
             type="text"
             placeholder="English"
@@ -137,10 +140,10 @@ function CustomerForm(props) {
             onChange={props.toggle}
           />
         </div>
-        <div className="my-2 mx-5">
+        <div className="my-2 mx-5 flex">
           <label htmlFor="gender">Gender</label>
           <input
-            className="ml-10 border border-gray-500"
+            className="ml-auto border border-gray-500"
             id="gender"
             type="text"
             placeholder="English"
@@ -149,10 +152,10 @@ function CustomerForm(props) {
             onChange={props.toggle}
           />
         </div>
-        <div className="my-2 mx-5">
+        <div className="my-2 mx-5 flex">
           <label htmlFor="ward_no">Ward Number</label>
           <input
-            className="ml-10 border border-gray-500"
+            className="ml-auto border border-gray-500"
             id="ward_no"
             type="text"
             placeholder="English"
@@ -161,10 +164,10 @@ function CustomerForm(props) {
             onChange={props.toggle}
           />
         </div>
-        <div className="my-2 mx-2">
+        <div className="my-2 mx-5 flex">
           <label htmlFor="municipality_name">Municipality Name</label>
           <input
-            className="ml-10 border border-gray-500"
+            className="ml-auto border border-gray-500"
             id="municipality_name"
             type="text"
             placeholder="English"
@@ -173,8 +176,13 @@ function CustomerForm(props) {
             onChange={props.toggle}
           />
         </div>
-        <button type="submit" className="mt-3 bg-green-500 w-80 h-9 rounded-t-lg rounded-b-lg">Submit</button>
-      </form> 
+        <button
+          type="submit"
+          className="mt-3 bg-green-500 w-80 h-9 rounded-t-lg rounded-b-lg"
+        >
+          Submit
+        </button>
+      </form>
     </div>
   );
 }
