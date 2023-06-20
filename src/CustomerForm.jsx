@@ -2,8 +2,12 @@ import "./App.css";
 function CustomerForm(props) {
   return (
     <div className="max-w-md mx-auto mt-10 p-6 bg-white rounded shadow-lg">
-      <h1 className="text-2xl font-bold mb-6">User Form</h1>
-      <form onSubmit={props.hangleForm} className="border rounded w-full py-2 px-3 mt-1 text-right">
+      <div className=" w-auto h-24 bg-blue-950 text-white rounded-t-lg">
+        <div className="pt-5">
+          <h1 className="text-2xl">Customer</h1>
+        </div>
+      </div>
+      <form onSubmit={props.hangleForm} className="border rounded w-full py-2 px-3 mt-1 text-right" aria-required>
         <div className="my-2 mx-5">
           <label htmlFor="username">Username</label>
           <input

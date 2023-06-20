@@ -4,8 +4,7 @@ import "./App.css";
 import WardForm from "./WardForm";
 import MunicipalityForm from "./MunicipalityForm";
 import CustomerForm from "./CustomerForm";
-import {Link, Routes, Route } from 'react-router-dom';
-
+import { Link, Routes, Route } from "react-router-dom";
 
 function App() {
   const [loginData, setLoginData] = useState({
@@ -105,7 +104,7 @@ function App() {
       [name]: type === "checkbox" ? checked : value,
     }));
   }
-  
+
   function handleChangeMunicipality(event) {
     const { name, value, type, checked } = event.target;
     setMunicipalityData((prevMunicipalityData) => ({
@@ -130,24 +129,55 @@ function App() {
 
   return (
     <div>
+      <h1 className="text-center text-7xl">Digital Palika</h1>
       <nav>
-        <Link to="/login" className="mr-2">Login</Link>
-        <Link to="/Ward" className="mr-2">Ward</Link>
-        <Link to="/Customer" className="mr-2">Customer</Link>
-        <Link to="/Municipality" className="mr-2">Municipality</Link>
+        <div className="flex justify-between mt-5">
+          <div className="box-content h-32 w-96 p-4 border-4 flex justify-center items-center bg-green-500 text-3xl hover:bg-green-600">
+            <Link to="/login">Login</Link>
+          </div>
+          <div className="box-content h-32 w-96 p-4 border-4 flex justify-center items-center  bg-green-500 text-3xl hover:bg-green-600">
+            <Link to="/Ward">Ward</Link>
+          </div>
+        </div>
+        <div className="flex justify-between mt-5">
+          <div className="box-content h-32 w-96 p-4 border-4 flex justify-center items-center bg-green-500 text-3xl hover:bg-green-600">
+            <Link to="/Customer">Customer</Link>
+          </div>
+          <div className="box-content h-32 w-96 p-4 border-4 flex justify-center items-center bg-green-500 text-3xl hover:bg-green-600">
+            <Link to="/Municipality">Municipality</Link>
+          </div>
+        </div>
       </nav>
       <Routes>
-        <Route path="/login"
-          element={<LoginPage toggle={handleChangeLogin} hangleForm={handleSubmit}/>}
+        <Route
+          path="/login"
+          element={
+            <LoginPage toggle={handleChangeLogin} hangleForm={handleSubmit} />
+          }
         />
-        <Route path="/Ward"
-        element={<WardForm toggle={handleChangeWard} hangleForm={handleSubmit} />}
+        <Route
+          path="/Ward"
+          element={
+            <WardForm toggle={handleChangeWard} hangleForm={handleSubmit} />
+          }
         />
-        <Route path="/Customer"
-          element={<CustomerForm toggle={handleChangeMunicipality} hangleForm={handleSubmit} />}
+        <Route
+          path="/Customer"
+          element={
+            <CustomerForm
+              toggle={handleChangeMunicipality}
+              hangleForm={handleSubmit}
+            />
+          }
         />
-        <Route path="/Municipality"
-          element={<MunicipalityForm toggle={handleChangeCustomer} hangleForm={handleSubmit} />}
+        <Route
+          path="/Municipality"
+          element={
+            <MunicipalityForm
+              toggle={handleChangeCustomer}
+              hangleForm={handleSubmit}
+            />
+          }
         />
       </Routes>
     </div>

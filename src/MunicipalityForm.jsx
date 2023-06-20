@@ -2,9 +2,13 @@ import "./App.css";
 function MunicipalityForm(props) {
   return (
     <div className="max-w-md mx-auto mt-10 p-6 bg-white rounded shadow-lg">
-      <h1 className="text-2xl font-bold mb-6">Municipality Form</h1>
+      <div className=" w-auto h-24 bg-blue-950 text-white rounded-t-lg">
+        <div className="pt-5">
+          <h1 className="text-2xl">Municiplity</h1>
+        </div>
+      </div>
       <form
-        onSubmit={props.hangleForm}
+        onSubmit={props.hangleForm} required
         className="border rounded w-full py-2 px-3 mt-1 text-justify"
       >
         <div className="my-2 mx-5">
